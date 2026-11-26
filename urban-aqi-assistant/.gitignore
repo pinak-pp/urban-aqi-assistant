@@ -1,0 +1,19 @@
+# secrets - NEVER commit real API keys
+.env
+*.env
+!.env.example
+
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# test / ci artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# streamlit / os
+.streamlit/secrets.toml
+.DS_Store
