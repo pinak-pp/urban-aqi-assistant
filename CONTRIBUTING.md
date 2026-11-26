@@ -44,9 +44,14 @@ full live data while developing:
 
 - `python -m py_compile app.py aqi_data.py advice.py cities.py geolocation.py`
   passes.
+- `pytest tests/ -q` passes (CI runs it automatically on your PR - add a
+  test if you change behavior, e.g. new cities or new advice tiers).
 - The app still runs: `python -m streamlit run app.py`.
 - New user-facing text is simple English (many readers are non-native
   speakers) and works in both light and dark Streamlit themes.
+- Custom HTML keeps accessibility: ARIA labels on new tiles, `role="status"`
+  live regions for status text, and visible focus states on interactive
+  elements.
 - Data attributions (WAQI / aqicn.org, OpenAQ) are preserved.
 
 ## Data license note
